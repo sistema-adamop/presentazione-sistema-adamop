@@ -154,6 +154,19 @@
     text-shadow:0 1px 4px rgba(0,0,0,.8);
   }
 
+  /* ---------- GRIGLIA PLAYLIST (sezione demo) ---------- */
+  .vt-grid{
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:18px;
+    max-width:1080px; margin:0 auto;
+  }
+  .vt-item{cursor:pointer}
+  .vt-item .vt{margin-top:0}
+  .vt-title{
+    display:block; margin-top:8px; color:var(--text); font-size:.86rem; font-weight:600;
+    text-align:center;
+  }
+  .vt-item:hover .vt-title{color:var(--gold-bright)}
+
   /* ---------- LIGHTBOX VIDEO (player espanso) ---------- */
   .vl{
     display:none; position:fixed; inset:0; z-index:9999; background:rgba(5,4,2,.92);
@@ -669,18 +682,82 @@
     <div class="sec-head">
       <p class="eyebrow">In movimento</p>
       <h2>Guarda ADAMOP in azione</h2>
-      <p>Timbra un servizio e guarda il compenso aggiornarsi da solo, fino al cedolino.</p>
+      <p>Seleziona il video che ti interessa direttamente dall'elenco nella playlist qui sotto.</p>
     </div>
-    <div class="video-frame" style="background:#000">
-      <iframe src="https://www.youtube.com/embed/EJ-K31ZHO3Y?list=PLDfEeM6FWdmg"
-        title="Presentazione e tutorial Sistema ADAMOP" frameborder="0"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen style="width:100%;height:100%;border:0;border-radius:18px"></iframe>
+    <div class="vt-grid">
+      <div class="vt-item" onclick="apriVideo('EJ-K31ZHO3Y')">
+        <div class="vt"><img src="https://img.youtube.com/vi/EJ-K31ZHO3Y/hqdefault.jpg" loading="lazy" alt="01 · Introduzione"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">01 · Introduzione</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('2dq_z1Gi3FY')">
+        <div class="vt"><img src="https://img.youtube.com/vi/2dq_z1Gi3FY/hqdefault.jpg" loading="lazy" alt="02 · Anagrafica"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">02 · Anagrafica</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('B8DfDkdtulk')">
+        <div class="vt"><img src="https://img.youtube.com/vi/B8DfDkdtulk/hqdefault.jpg" loading="lazy" alt="03 · Home e Urgenza"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">03 · Home e Urgenza</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('YQBLUzL54Oc')">
+        <div class="vt"><img src="https://img.youtube.com/vi/YQBLUzL54Oc/hqdefault.jpg" loading="lazy" alt="04 · Licenze"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">04 · Licenze</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('e3_BS7ainvs')">
+        <div class="vt"><img src="https://img.youtube.com/vi/e3_BS7ainvs/hqdefault.jpg" loading="lazy" alt="05 · Permesso Orario"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">05 · Permesso Orario</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('tRLn5w_6gH8')">
+        <div class="vt"><img src="https://img.youtube.com/vi/tRLn5w_6gH8/hqdefault.jpg" loading="lazy" alt="06 · Comando"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">06 · Comando</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('wmTNfZJSAvk')">
+        <div class="vt"><img src="https://img.youtube.com/vi/wmTNfZJSAvk/hqdefault.jpg" loading="lazy" alt="07 · CFI"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">07 · CFI</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('EVMMFpC2EQw')">
+        <div class="vt"><img src="https://img.youtube.com/vi/EVMMFpC2EQw/hqdefault.jpg" loading="lazy" alt="08 · Servizi"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">08 · Servizi</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('yTAntK-X0rs')">
+        <div class="vt"><img src="https://img.youtube.com/vi/yTAntK-X0rs/hqdefault.jpg" loading="lazy" alt="09 · Straordinario/Reperibilità"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">09 · Straordinario/Reperibilità</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('8Sz8N4GVRgc')">
+        <div class="vt"><img src="https://img.youtube.com/vi/8Sz8N4GVRgc/hqdefault.jpg" loading="lazy" alt="10 · Calendarizza e Gruppo di Viaggio"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">10 · Calendarizza e Gruppo di Viaggio</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('JdKxQ3icl9Y')">
+        <div class="vt"><img src="https://img.youtube.com/vi/JdKxQ3icl9Y/hqdefault.jpg" loading="lazy" alt="11 · Quadro Economico"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">11 · Quadro Economico</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('Obq6q0vtUEQ')">
+        <div class="vt"><img src="https://img.youtube.com/vi/Obq6q0vtUEQ/hqdefault.jpg" loading="lazy" alt="12 · Strade Sicure e Missioni"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">12 · Strade Sicure e Missioni</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('WdM2L2c-l0o')">
+        <div class="vt"><img src="https://img.youtube.com/vi/WdM2L2c-l0o/hqdefault.jpg" loading="lazy" alt="13 · Trasferimenti"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">13 · Trasferimenti</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('DVZTm48bgtQ')">
+        <div class="vt"><img src="https://img.youtube.com/vi/DVZTm48bgtQ/hqdefault.jpg" loading="lazy" alt="14 · Fogli di Viaggio"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">14 · Fogli di Viaggio</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('xOBkzV1pzgQ')">
+        <div class="vt"><img src="https://img.youtube.com/vi/xOBkzV1pzgQ/hqdefault.jpg" loading="lazy" alt="15 · Backup"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">15 · Backup</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('x37XDAmwWus')">
+        <div class="vt"><img src="https://img.youtube.com/vi/x37XDAmwWus/hqdefault.jpg" loading="lazy" alt="16 · Patenti"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">16 · Patenti</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('i9iDL8RQAPA')">
+        <div class="vt"><img src="https://img.youtube.com/vi/i9iDL8RQAPA/hqdefault.jpg" loading="lazy" alt="17 · Esporta e Stampa"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">17 · Esporta e Stampa</span>
+      </div>
+      <div class="vt-item" onclick="apriVideo('2cTHDtCJP00')">
+        <div class="vt"><img src="https://img.youtube.com/vi/2cTHDtCJP00/hqdefault.jpg" loading="lazy" alt="18 · Guide"><span class="vt-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l14-8z"/></svg></span></div>
+        <span class="vt-title">18 · Guide</span>
+      </div>
     </div>
-    <p style="text-align:center; margin-top:14px; color:var(--muted); font-size:.9rem">
-      18 video, uno per funzione — <a class="mail" href="https://www.youtube.com/playlist?list=PLDfEeM6FWdmg" target="_blank" rel="noopener">guarda la playlist completa</a>
-    </p>
   </section>
 
   <hr class="divider">
